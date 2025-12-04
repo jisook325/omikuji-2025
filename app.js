@@ -27,14 +27,14 @@ const fortunes = [
     key: "fortune4",
     title: "말길",
     desc: "소소하지만 확실한 행복이 당신 곁에 머무릅니다.",
-    img: "assets/img/fortune3.png",
+    img: "assets/img/fortune4.png",
     weight: 5
   },
   {
     key: "fortune5",
     title: "흉?",
     desc: "역전의 용사가 되어보세요. ",
-    img: "assets/img/fortune3.png",
+    img: "assets/img/fortune4.png",
     weight: 5   
   }
 ];
