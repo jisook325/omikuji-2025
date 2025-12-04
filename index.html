@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>오미쿠지 | 오늘의 복주머니</title>
+  <meta name="description" content="정적 웹 기반 오미쿠지 서비스. 복주머니를 눌러 오늘의 운세를 확인해보세요." />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GA4 기본 스니펫: G-XXXXXXX 를 실제 Measurement ID로 교체 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-XXXXXXX", {
+      send_page_view: true
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- 랜딩 = 복주머니(뽑기) 화면 -->
+    <section id="draw-section">
+      <h1 class="page-title">오늘의 오미쿠지</h1>
+      <p class="page-subtitle">복주머니를 눌러 오늘의 운세를 뽑아보세요.</p>
+
+      <!-- 복주머니 버튼: 나중에 CSS로 이미지/일러스트로 스타일링 가능 -->
+      <button id="draw-btn" class="pouch-button">
+        복주머니 열기
+      </button>
+    </section>
+
+    <!-- 결과 화면 (처음에는 숨김) -->
+    <section id="result-section" class="hidden">
+      <h2 id="fortune-title"></h2>
+      <img id="fortune-img" alt="오미쿠지 결과 이미지" />
+      <p id="fortune-desc"></p>
+
+      <div class="button-group">
+        <button id="share-btn">친구에게 공유</button>
+        <button id="retry-btn">다시 뽑기</button>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
